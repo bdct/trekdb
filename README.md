@@ -1,4 +1,4 @@
-## [TrekDB](http://www.maravento.com)
+## [TrekDB](https://www.maravento.com)
 
 **TrekDB** replicates or restore data from MySQL or MariaDB databases (and associated files) into the "data" folder, using TREK (to migrate) and RESTORE (to restore) / **TrekDB** replica o restaura datos de las bases de datos MySQL o MariaDB (y archivos asociados) dentro de la carpeta "data", usando las opciones TREK (para migrar) y RESTORE (para restaurar)
 
@@ -6,7 +6,7 @@
 
 |File|Version|OS|Update|Size|
 | :---: | :---: | :---: | :---: | :---: |
-|[trekdb.exe (.zip)](https://raw.githubusercontent.com/maravento/trekdb/master/trekdb.zip)|1.0|Windows 7/8/10 x86 x64|Feb 19/2020|2.1 MB|
+|[trekdb.exe (.zip)](https://raw.githubusercontent.com/maravento/trekdb/master/trekdb.zip)|1.0|Windows 7/8/10 x86 x64|May 10/2020|2.1 MB|
 
 ### HOW TO USE
 ---
@@ -18,43 +18,88 @@ Desactive su Antivirus, Antimalware, SmartScreen o cualquier otra solución de s
 ### IMPORTANT BEFORE USE
 ---
 
-- These tools are designed for [Wampserver](http://wampserver.aviatechno.net/?lang=en). Compatibility with other environments is not guaranteed / Estas herramientas están diseñadas para [Wampserver](http://wampserver.aviatechno.net/?lang=en). No se garantiza compatibilidad con otros entornos
-- The TREK option migrates the contents of the "source" directory (for MARIADB: "\bin\mariadb\mariadb(version)\data" and for MYSQL: \bin\mysql\mysql(version)\data") to the "destination" directory (c:\MySQLTREK or c:\MARIADBTrek) and the RESTORE option restores the contents of the "destination" directory to the "source" directory / La opción TREK migra el contenido del directorio "origen" (Para MARIADB: "\bin\mariadb\mariadb(version)\data" y Para MYSQL: \bin\mysql\mysql(version)\data") al directorio "destino" (c:\MySQLTREK o c:\MARIADBTrek) y la opción RESTORE restaura el contenido del directorio "destino" al directorio "origen"
+- MariaDB & MySQL WampServer Trek tools are designed only for [Wampserver](http://wampserver.aviatechno.net/?lang=en) / MariaDB & MySQL WampServer Trek tools están diseñadas únicamente para [Wampserver](http://wampserver.aviatechno.net/?lang=en).
+- The **TREK** option migrates the contents of the "source" directory (for MARIADB: `\mariadb(version)\data` and for MYSQL: `\mysql(version)\data`) to the "destination" directory (For MysQL: `c:\MYSQLTREK`, for MariaDB: `c:\MARIADBTREK`, for MySQL WampServer: `c:\MYSQLTREKW`, For MariaDB WampServer: `c:\MARIADBTREKW`) and **RESTORE** option restores the contents of the "destination" directory to the "source" directory / La opción **TREK** migra el contenido del directorio "origen" (Para MARIADB: `\mariadb(version)\data` y Para MYSQL: `\mysql(version)\data`) al directorio "destino" (Para MysQL: `c:\MYSQLTREK`, Para MariaDB: `c:\MARIADBTREK`, Para MySQL WampServer: `c:\MYSQLTREKW`, Para MariaDB WampServer: `c:\MARIADBTREKW`) y la opción **RESTORE** restaura el contenido del directorio "destino" al directorio "origen"
 - These tools use [Robust File Copy](https://en.wikipedia.org/wiki/Robocopy), which has some limitations and may not achieve the desired results. Use them at your own risk / Estas herramientas utilizan [Robust File Copy](https://es.wikipedia.org/wiki/Robocopy), el cual tiene algunas limitaciones y puede no obtener los resultados deseados. Úselas bajo su propio riesgo
 
-##### DB Selector
+### DB SELECTOR
+---
 
-Select the database to migrate. Press Cancel to exit / Seleccione la base de datos a migrar. Pulse Cancel para salir
+[![Image](https://1.bp.blogspot.com/-RJB_IL4T3iE/XmF7YdWSKPI/AAAAAAAALKo/OA4YZ0yPrEg5RJl7g6iWH7xwtjdvzc5UQCLcBGAsYHQ/s1600/trekdb-selector.png)](https://www.maravento.com)
 
-[![Image](https://1.bp.blogspot.com/-5iTkm91Ossw/Xk6__9A2jeI/AAAAAAAAE1c/38DmBGgb9LcNRrEN0fY1brNye--HATRyACLcBGAsYHQ/s1600/trekdb-selector.png)](https://www.maravento.com)
+Select database to migrate. Press Cancel to exit / Seleccione la base de datos a migrar. Pulse Cancel para salir
 
-##### MySQL
+### MySQL Trek
+---
 
-MySQL Trek replicates or restore data from MySQL databases (and associated files) into the "data" folder, using TREK (to migrate) and RESTORE (to restore) / MySQL Trek replica o restaura datos de las bases de datos MySQL (y archivos asociados) dentro de la carpeta "data", usando las opciones TREK (para migrar) y RESTORE (para restaurar)
+[![Image](https://1.bp.blogspot.com/-Jjkp7DQCDNM/XmF7VqHXAkI/AAAAAAAALKg/l8vSqF9isc4QrFas0n9fGZs0Uk-91g7AQCLcBGAsYHQ/s1600/trekdb-mysql.png)](https://www.maravento.com)
 
-[![Image](https://1.bp.blogspot.com/-k8JwN332rao/Xk6__VhRMYI/AAAAAAAAE1Y/nvrHI_2bpZUTNETbWgX9MjyFy-YDUexwwCLcBGAsYHQ/s1600/trekdb-mysql.png)](https://www.maravento.com)
+MySQL Trek replicates or restore data from MySQL databases (and associated files) into the `%HOMEDRIVE%\mysql\mysql-%version%\data` folder, using **TREK** (to migrate) and **RESTORE** (to restore) / MySQL Trek replica o restaura datos de las bases de datos MySQL (y archivos asociados) dentro de la carpeta `%HOMEDRIVE%\mysql\mysql-%version%\data`, usando las opciones **TREK**(para migrar) y **RESTORE** (para restaurar)
 
-If you selected the TREK option at the end, the following message will appear: / Si seleccionó la opción TREK al finalizar saldrá el siguiente mensaje:
+##### MySQL: Trek and Restore
 
-[![Image](https://1.bp.blogspot.com/-QOUtCRdfs0E/Xk6_-wCDioI/AAAAAAAAE1U/gHbzXrkB1L4KtkioDWdrZkArUkp4LkzUgCLcBGAsYHQ/s1600/trekdb-mysql-trek.png)](https://www.maravento.com)
+If you selected **TREK** option at the end, the following message will appear: / Si seleccionó la opción **TREK** al finalizar saldrá el siguiente mensaje:
 
-If you selected the RESTORE option at the end, the following message will appear: / Si seleccionó la opción RESTORE al finalizar saldrá el siguiente mensaje:
+[![Image](https://1.bp.blogspot.com/-0nEo_0MfXu0/XmF7VRcAx5I/AAAAAAAALKc/l0JPHaIxI5odL25n2GmXsL2-SyW10qxRACLcBGAsYHQ/s1600/trekdb-mysql-end-trek.png)](https://www.maravento.com)
 
-[![Image](https://1.bp.blogspot.com/-VG4socUO104/Xk6_-jGy70I/AAAAAAAAE1Q/Yfg9F9n9XrgwUYLDtKB_hfbI-ZGqYRfvQCLcBGAsYHQ/s1600/trekdb-mysql-restore.png)](https://www.maravento.com)
+If you selected **RESTORE** option at the end, the following message will appear: / Si seleccionó la opción **RESTORE** al finalizar saldrá el siguiente mensaje:
 
-##### MariaDB
+[![Image](https://1.bp.blogspot.com/-EGAv0XgBXCI/XmF7VWCWkSI/AAAAAAAALKY/3A--wjEP8lsR0Ng1wk8bJbpUFH3jxjxSgCLcBGAsYHQ/s1600/trekdb-mysql-end-restore.png)](https://www.maravento.com)
 
-MariaDB Trek replicates or restore data from MariaDB databases (and associated files) into the "data" folder, using TREK (to migrate) and RRESTORE (to restore) / MariaDB Trek replica o restaura datos de las bases de datos MariaDB (y archivos asociados) dentro de la carpeta "data", usando las opciones TREK (para migrar) y RESTORE (para restaurar)
+### MariaDB Trek
+---
 
-[![Image](https://1.bp.blogspot.com/-8mqhVZ5Bjf0/Xk6_-ERVNkI/AAAAAAAAE1M/EgSQ3EJcsR03mBIZYcZTAcRnG8ZyMcXCQCLcBGAsYHQ/s1600/trekdb-mariadb.png)](https://www.maravento.com)
+[![Image](https://1.bp.blogspot.com/-uITXn-iW-gg/XmF7UCrRvPI/AAAAAAAALKM/f37Vd5xGXI0ou3NHYOvurSh1EPdnHFFkgCLcBGAsYHQ/s1600/trekdb-mariadb.png)](https://www.maravento.com)
 
-If you selected the TREK option at the end, the following message will appear: / Si seleccionó la opción TREK al finalizar saldrá el siguiente mensaje:
+MariaDB Trek Trek replicates or restore data from MySQL databases (and associated files) into the `%HOMEDRIVE%\mariadb\mariadb-%version%\data` folder, using **TREK** (to migrate) and **RESTORE** (to restore) / MariaDB Trek Trek replica o restaura datos de las bases de datos MySQL (y archivos asociados) dentro de la carpeta `%HOMEDRIVE%\mariadb\mariadb-%version%\data`, usando las opciones **TREK**(para migrar) y **RESTORE** (para restaurar)
 
-[![Image](https://1.bp.blogspot.com/-ul8z2k6NTGA/Xk6_-MUyfiI/AAAAAAAAE1I/ql7eVCRBNvo4KHgYSqESzcbIM7G0rsNPQCLcBGAsYHQ/s1600/trekdb-mariadb-trek.png)](https://www.maravento.com)
+##### MariaDB: Trek and Restore
 
-If you selected the RESTORE option at the end, the following message will appear: / Si seleccionó la opción RESTORE al finalizar saldrá el siguiente mensaje:
+If you selected **TREK** option at the end, the following message will appear: / Si seleccionó la opción **TREK** al finalizar saldrá el siguiente mensaje:
 
-[![Image](https://1.bp.blogspot.com/-lV62G33W8FQ/Xk6_-IDNZLI/AAAAAAAAE1E/tQsAExhZKuM5lv46VwIK--sIEWWDnyaBwCLcBGAsYHQ/s1600/trekdb-mariadb-restore.png)](https://www.maravento.com)
+[![Image](https://1.bp.blogspot.com/-lxVaE1CjZQo/XmF7UBWHKXI/AAAAAAAALKQ/1Ysm01DfjLIPHapZR4LKgMRCh2d9gbuHQCLcBGAsYHQ/s1600/trekdb-mariadb-end-trek.png)](https://www.maravento.com)
+
+If you selected **RESTORE** option at the end, the following message will appear: / Si seleccionó la opción **RESTORE** al finalizar saldrá el siguiente mensaje:
+
+[![Image](https://1.bp.blogspot.com/-4_zd_-zcQvg/XmF7UUjSVnI/AAAAAAAALKU/y10JaXLya48wjT-pUfQV6B4GMAgXTEMmQCLcBGAsYHQ/s1600/trekdb-mariadb-end-restore.png)](https://www.maravento.com)
+
+##### Important about MariaDB Trek
+
+- MariaDB Trek is designed only to work with the [MariaDB 10.4.x Stable (.zip version x86 x64)](https://downloads.mariadb.org/mariadb/10.4.12/), which must be decompressed in the path `%HOMEDRIVE%\mariadb\mariadb-%version%` / MariaDB Trek está diseñada únicamente para trabajar con el paquete [MariaDB 10.4.x Stable (.zip version x86 x64)](https://downloads.mariadb.org/mariadb/10.4.12/), el cual debe estar descomprimido en el path `%HOMEDRIVE%\mariadb\mariadb-%version%`
+
+### MySQL WampServer Trek
+---
+
+[![Image](https://1.bp.blogspot.com/-hBfmbtfVLTw/XmF7Z2s3AQI/AAAAAAAALK8/LmoVIiddwToBTa2VSE0NCI0cg5vCWVihACLcBGAsYHQ/s1600/trekdb-wampmysql.png)](https://www.maravento.com)
+
+MySQL WampServer Trek replicates or restore data from MySQL databases (and associated files) into the `data` folder, using **TREK** (to migrate) and **RESTORE** (to restore) / MySQL WampServer Trek replica o restaura datos de las bases de datos MySQL (y archivos asociados) dentro de la carpeta `data`, usando las opciones **TREK** (para migrar) y **RESTORE** (para restaurar)
+
+##### MySQL WampServer: Trek and Restore
+
+If you selected **TREK** option at the end, the following message will appear: / Si seleccionó la opción **TREK** al finalizar saldrá el siguiente mensaje:
+
+[![Image](https://1.bp.blogspot.com/-A1g6Tbe3SM0/XmF7Z0ra0zI/AAAAAAAALK4/qULod2aGLUs2vSeRS1rkYdNLD6_pv8_9ACLcBGAsYHQ/s1600/trekdb-wampmysql-end-trek.png)](https://www.maravento.com)
+
+If you selected **RESTORE** option at the end, the following message will appear: / Si seleccionó la opción **RESTORE** al finalizar saldrá el siguiente mensaje:
+
+[![Image](https://1.bp.blogspot.com/-WuvdodOnLi0/XmF7Zrq9CMI/AAAAAAAALK0/G3ud9Z_S5R4KNTJEYgJ2J6wfKC4NiD-tQCLcBGAsYHQ/s1600/trekdb-wampmysql-end-restore.png)](https://www.maravento.com)
+
+### MariaDB WampServer Trek
+---
+
+[![Image](https://1.bp.blogspot.com/-qtXO_hBmwxU/XmF7Y4LNZWI/AAAAAAAALKw/2fj1m84vH-o91JAZaZlYZ49c30e2TN_EgCLcBGAsYHQ/s1600/trekdb-wampmariadb.png)](https://www.maravento.com)
+
+MariaDB WampServer Trek replicates or restore data from MariaDB databases (and associated files) into the `data` folder, using **TREK** (to migrate) and **RESTORE** (to restore) / MariaDB WampServer Trek replica o restaura datos de las bases de datos MariaDB (y archivos asociados) dentro de la carpeta `\data`, usando las opciones **TREK** (para migrar) y **RESTORE** (para restaurar)
+
+##### MariaDB WampServer: Trek and Restore
+
+If you selected **TREK** option at the end, the following message will appear: / Si seleccionó la opción **TREK** al finalizar saldrá el siguiente mensaje:
+
+[![Image](https://1.bp.blogspot.com/-cIgXndRRG8M/XmF7YospfdI/AAAAAAAALKs/79lnV4tY0TIf3-iO6Ew23Gpjfp185lnKQCLcBGAsYHQ/s1600/trekdb-wampmariadb-end-trek.png)](https://www.maravento.com)
+
+If you selected **RESTORE** option at the end, the following message will appear: / Si seleccionó la opción **RESTORE** al finalizar saldrá el siguiente mensaje:
+
+[![Image](https://1.bp.blogspot.com/-BeEVtP4G7_k/XmF7X4zFPEI/AAAAAAAALKk/jj_gkI9LGlcJP4mJrenYwOkQyYsdIv0LQCLcBGAsYHQ/s1600/trekdb-wampmariadb-end-restore.png)](https://www.maravento.com)
 
 ### CONTRIBUTIONS
 ---
@@ -72,11 +117,11 @@ BTC: 3M84UKpz8AwwPADiYGQjT9spPKCvbqm4Bc
 [![GPL-3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl.txt)
 
 [![CreativeCommons](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-[maravento.com](http://www.maravento.com) is licensed under a [Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License](http://creativecommons.org/licenses/by-sa/4.0/).
+[maravento.com](https://www.maravento.com) is licensed under a [Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 [WinZenity](https://github.com/maravento/winzenity), [Jpsoft](https://jpsoft.com/), [SteelWerX](https://fstaal01.home.xs4all.nl/swreg-us.html), [Microsoft](https://www.microsoft.com/), [74cz](http://74.cz/es/make-sfx/index.php), [Resource Hacker](http://www.angusj.com/resourcehacker/), [7zSFX Builder](https://sourceforge.net/projects/s-zipsfxbuilder/)
 
-© 2020 [Maravento Studio](http://www.maravento.com)
+© 2020 [Maravento Studio](https://www.maravento.com)
 
 ### DISCLAIMER
 ---
